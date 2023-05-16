@@ -16,5 +16,11 @@ namespace Cinema
         {
             InitializeComponent();
         }
+
+        private void clientes_Click(object sender, EventArgs e)
+        {
+            Clientes gerir_clientes = new Clientes();
+            gerir_clientes.ShowDialog();
+        }
     }
 }
