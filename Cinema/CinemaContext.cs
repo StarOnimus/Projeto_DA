@@ -12,5 +12,6 @@ namespace Cinema
     {
         public DbSet<Pessoa> Pessoas { get; set; }
         public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
     }
 }

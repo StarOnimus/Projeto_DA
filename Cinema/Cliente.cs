@@ -8,14 +8,7 @@ namespace Cinema
 {
     internal class Cliente : Pessoa
     {
-        int numFiscal;
-
-        public Cliente(string nome, string morada, int numFiscal)
-        {
-            this.nome = nome;
-            this.morada = morada;
-            this.numFiscal = numFiscal;
-        }
+        public int numFiscal { get; set;  }
 
         public override string ToString()
         {

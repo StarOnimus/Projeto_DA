@@ -8,6 +8,8 @@ namespace Cinema
 {
     internal class Pessoa
     {
-        protected string nome, morada;
+        public int id { get; set; }
+        public string nome { get; set; }
+        public string morada { get; set; }
     }
 }

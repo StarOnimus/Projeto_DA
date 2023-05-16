@@ -20,11 +20,16 @@ namespace Cinema
         private void adicionar_Click(object sender, EventArgs e)
         {
             try {
-                Cliente cliente = new Cliente(clienteNome.Text, clienteMorada.Text, Int32.Parse(clienteNumFisc.Text));
-                listBox1.Items.Add(cliente.ToString());
+                using (var db = new CinemaContext())
+                {
+                    var cl = new Cliente { nome = clienteNome.Text, morada = clienteMorada.Text, numFiscal = Int32.Parse(clienteNumFisc.Text) };
+                    db.Clientes.Add(cl);
+                    db.SaveChanges();
+                    listBox1.Items.Add(cl.ToString());
+                }
             }
-            catch (Exception) {
-                MessageBox.Show("Dados invalidos!");
+            catch (Exception x) {
+                MessageBox.Show(x.ToString());
             }
         }
     }
