@@ -22,5 +22,14 @@ namespace Cinema
             Clientes gerir_clientes = new Clientes();
             gerir_clientes.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (var db = new CinemaContext())
+            {
+                listBox1.DataSource = db.Pessoas.ToList();
+
+            }
+        }
     }
 }
