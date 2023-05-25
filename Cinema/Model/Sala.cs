@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cinema
+namespace Cinema.Model
 {
     internal class Sala
     {
+        public int id { get; set; }
         public string nome { get; set; }
         public int colunas { get; set; }
 

@@ -8,6 +8,7 @@ namespace Cinema.Model
 {
     internal class Categoria
     {
+        public int id { get; set; }
         public string nome { get; set; }
         public bool activa { get; set; }
 

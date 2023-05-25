@@ -1,6 +1,6 @@
 ﻿namespace Cinema
 {
-    partial class Clientes
+    partial class FormClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -36,33 +36,35 @@
             this.label3 = new System.Windows.Forms.Label();
             this.adicionar = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.eliminar = new System.Windows.Forms.Button();
+            this.editar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // clienteNome
             // 
-            this.clienteNome.Location = new System.Drawing.Point(142, 19);
+            this.clienteNome.Location = new System.Drawing.Point(15, 37);
             this.clienteNome.Name = "clienteNome";
-            this.clienteNome.Size = new System.Drawing.Size(165, 22);
+            this.clienteNome.Size = new System.Drawing.Size(239, 22);
             this.clienteNome.TabIndex = 0;
             // 
             // clienteMorada
             // 
-            this.clienteMorada.Location = new System.Drawing.Point(142, 46);
+            this.clienteMorada.Location = new System.Drawing.Point(12, 90);
             this.clienteMorada.Name = "clienteMorada";
-            this.clienteMorada.Size = new System.Drawing.Size(165, 22);
+            this.clienteMorada.Size = new System.Drawing.Size(242, 22);
             this.clienteMorada.TabIndex = 1;
             // 
             // clienteNumFisc
             // 
-            this.clienteNumFisc.Location = new System.Drawing.Point(142, 73);
+            this.clienteNumFisc.Location = new System.Drawing.Point(12, 137);
             this.clienteNumFisc.Name = "clienteNumFisc";
-            this.clienteNumFisc.Size = new System.Drawing.Size(165, 22);
+            this.clienteNumFisc.Size = new System.Drawing.Size(242, 22);
             this.clienteNumFisc.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Location = new System.Drawing.Point(15, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 3;
@@ -71,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 52);
+            this.label2.Location = new System.Drawing.Point(12, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 4;
@@ -80,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 79);
+            this.label3.Location = new System.Drawing.Point(12, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 5;
@@ -88,9 +90,9 @@
             // 
             // adicionar
             // 
-            this.adicionar.Location = new System.Drawing.Point(12, 110);
+            this.adicionar.Location = new System.Drawing.Point(12, 182);
             this.adicionar.Name = "adicionar";
-            this.adicionar.Size = new System.Drawing.Size(292, 23);
+            this.adicionar.Size = new System.Drawing.Size(242, 48);
             this.adicionar.TabIndex = 6;
             this.adicionar.Text = "Adicionar";
             this.adicionar.UseVisualStyleBackColor = true;
@@ -100,16 +102,37 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(340, 19);
+            this.listBox1.Location = new System.Drawing.Point(292, 18);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(283, 116);
+            this.listBox1.Size = new System.Drawing.Size(331, 324);
             this.listBox1.TabIndex = 7;
+            // 
+            // eliminar
+            // 
+            this.eliminar.Location = new System.Drawing.Point(12, 290);
+            this.eliminar.Name = "eliminar";
+            this.eliminar.Size = new System.Drawing.Size(242, 48);
+            this.eliminar.TabIndex = 8;
+            this.eliminar.Text = "Eliminar";
+            this.eliminar.UseVisualStyleBackColor = true;
+            this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
+            // 
+            // editar
+            // 
+            this.editar.Location = new System.Drawing.Point(12, 236);
+            this.editar.Name = "editar";
+            this.editar.Size = new System.Drawing.Size(242, 48);
+            this.editar.TabIndex = 9;
+            this.editar.Text = "Editar";
+            this.editar.UseVisualStyleBackColor = true;
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 154);
+            this.ClientSize = new System.Drawing.Size(635, 350);
+            this.Controls.Add(this.editar);
+            this.Controls.Add(this.eliminar);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.adicionar);
             this.Controls.Add(this.label3);
@@ -135,5 +158,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button adicionar;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button eliminar;
+        private System.Windows.Forms.Button editar;
     }
 }

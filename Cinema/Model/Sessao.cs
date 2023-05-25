@@ -8,8 +8,9 @@ namespace Cinema.Model
 {
     internal class Sessao
     {
-        public string dtaHora { get; set; }
-        public string preco { get; set; }
+        public int id { get; set; }
+        public DateTime dtaHora { get; set; }
+        public float preco { get; set; }
 
 
         public override string ToString()

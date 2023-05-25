@@ -4,16 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cinema
+namespace Cinema.Model
 {
     internal class Cinema
     {
-        string nome, morada, email;
+        public int id { get; set;  }
+        public string nome { get; set; }
+        public string morada { get; set; }
+        public string email { get; set; }
+        //"List<Sala> Sala" para varios         Sala Sala para 1
+        public List<Sala> Sala { get; set; }
 
-        public Cinema(string nome, string morada, string email) { 
-            this.nome = nome;
-            this.morada = morada;
-            this.email = email;
+        public override string ToString()
+        {
+            return nome + " " + morada + " " + email;
         }
     }
 }
