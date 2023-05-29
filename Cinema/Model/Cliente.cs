@@ -9,6 +9,7 @@ namespace Cinema.Model
     internal class Cliente : Pessoa
     {
         public int numFiscal { get; set;  }
+        public List<Bilhete> Bilhetes { get; set; }
 
         public override string ToString()
         {

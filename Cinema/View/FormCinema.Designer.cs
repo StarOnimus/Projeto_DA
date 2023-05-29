@@ -44,6 +44,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.cinema_change = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +53,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(24, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 22);
+            this.textBox1.Size = new System.Drawing.Size(334, 22);
             this.textBox1.TabIndex = 0;
             // 
             // label1
@@ -77,14 +78,14 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(24, 90);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(223, 22);
+            this.textBox2.Size = new System.Drawing.Size(334, 22);
             this.textBox2.TabIndex = 3;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(24, 142);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(223, 22);
+            this.textBox3.Size = new System.Drawing.Size(334, 22);
             this.textBox3.TabIndex = 5;
             // 
             // label3
@@ -181,11 +182,22 @@
             this.numericUpDown2.Size = new System.Drawing.Size(223, 22);
             this.numericUpDown2.TabIndex = 17;
             // 
+            // cinema_change
+            // 
+            this.cinema_change.Location = new System.Drawing.Point(24, 179);
+            this.cinema_change.Name = "cinema_change";
+            this.cinema_change.Size = new System.Drawing.Size(334, 52);
+            this.cinema_change.TabIndex = 18;
+            this.cinema_change.Text = "Atualizar";
+            this.cinema_change.UseVisualStyleBackColor = true;
+            this.cinema_change.Click += new System.EventHandler(this.cinema_change_Click);
+            // 
             // FormCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 411);
+            this.Controls.Add(this.cinema_change);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label4);
@@ -229,5 +241,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button cinema_change;
     }
 }

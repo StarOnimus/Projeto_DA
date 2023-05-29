@@ -11,6 +11,7 @@ namespace Cinema.Model
     {
         public int salario { get; set; }
         public string funcao { get; set; }
+        public List<Bilhete> Bilhetes { get; set; }
 
         public override string ToString()
         {

@@ -13,7 +13,7 @@ namespace Cinema.Model
         public string morada { get; set; }
         public string email { get; set; }
         //"List<Sala> Sala" para varios         Sala Sala para 1
-        public List<Sala> Sala { get; set; }
+        public List<Sala> Salas { get; set; }
 
         public override string ToString()
         {
