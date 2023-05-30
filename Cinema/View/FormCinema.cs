@@ -18,6 +18,12 @@ namespace Cinema.View
         public FormCinema()
         {
             InitializeComponent();
+            var cinema = CinemaController.GetCinema();
+            if ( cinema != null ) {
+                cinema_nome.Text = cinema.nome;
+                cinema_morada.Text = cinema.morada;
+                cinema_email.Text = cinema.email;
+            }
         }
 
         private void adicionar_sala_Click(object sender, EventArgs e)
@@ -27,7 +33,7 @@ namespace Cinema.View
 
         private void cinema_change_Click(object sender, EventArgs e)
         {
-            CinemaController.AtualizarCinema();
+            CinemaController.AtualizarCinema(cinema_nome.Text, cinema_morada.Text, cinema_email.Text);
         }
     }
 }

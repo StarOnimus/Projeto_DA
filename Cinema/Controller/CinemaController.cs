@@ -11,19 +11,37 @@ namespace Cinema.Controller
 {
     internal class CinemaController
     {
-        public static Boolean AtualizarCinema()
+        public static Model.Cinema GetCinema()
         {
+            using (var db = new CinemaContext())
+            {
+                Model.Cinema cin = db.Cinemas.FirstOrDefault();
+                return cin;
+            }
+        }
+        public static Boolean AtualizarCinema(string nome1, string morada1, string email1)
+        {
+            if (string.IsNullOrEmpty(nome1) || string.IsNullOrEmpty(morada1) || string.IsNullOrEmpty(email1)) {
+                return false;
+            }
             try
             {
                 using (var db = new CinemaContext())
                 {
-                    Model.Cinema cl = db.Cinemas.FirstOrDefault();
-                    db.Cinemas.AddOrUpdate(cl);
+                    Model.Cinema cin = db.Cinemas.FirstOrDefault();
+                    if (cin == null) {
+                        cin = new Model.Cinema { nome = nome1, morada = morada1, email = email1 };
+                        db.Cinemas.Add(cin);
+                    } else {
+                        db.Cinemas.Remove(cin);
+                        cin = new Model.Cinema { nome = nome1, morada = morada1, email = email1 };
+                        db.Cinemas.Add(cin);
+                    }
                     db.SaveChanges();
                     return true;
                 }
             }
-            catch (Exception x)
+            catch (Exception)
             {
                 return false;
             }

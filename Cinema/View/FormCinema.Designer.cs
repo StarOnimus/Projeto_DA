@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cinema_nome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cinema_morada = new System.Windows.Forms.TextBox();
+            this.cinema_email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.adicionar_sala = new System.Windows.Forms.Button();
@@ -49,12 +49,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // cinema_nome
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(334, 22);
-            this.textBox1.TabIndex = 0;
+            this.cinema_nome.Location = new System.Drawing.Point(24, 38);
+            this.cinema_nome.Name = "cinema_nome";
+            this.cinema_nome.Size = new System.Drawing.Size(334, 22);
+            this.cinema_nome.TabIndex = 0;
             // 
             // label1
             // 
@@ -74,19 +74,19 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Morada";
             // 
-            // textBox2
+            // cinema_morada
             // 
-            this.textBox2.Location = new System.Drawing.Point(24, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(334, 22);
-            this.textBox2.TabIndex = 3;
+            this.cinema_morada.Location = new System.Drawing.Point(24, 90);
+            this.cinema_morada.Name = "cinema_morada";
+            this.cinema_morada.Size = new System.Drawing.Size(334, 22);
+            this.cinema_morada.TabIndex = 3;
             // 
-            // textBox3
+            // cinema_email
             // 
-            this.textBox3.Location = new System.Drawing.Point(24, 142);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(334, 22);
-            this.textBox3.TabIndex = 5;
+            this.cinema_email.Location = new System.Drawing.Point(24, 142);
+            this.cinema_email.Name = "cinema_email";
+            this.cinema_email.Size = new System.Drawing.Size(334, 22);
+            this.cinema_email.TabIndex = 5;
             // 
             // label3
             // 
@@ -208,12 +208,12 @@
             this.Controls.Add(this.editar_sala);
             this.Controls.Add(this.adicionar_sala);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.cinema_email);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cinema_morada);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cinema_nome);
             this.Name = "FormCinema";
             this.Text = "FormCinema";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -225,11 +225,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox cinema_nome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox cinema_morada;
+        private System.Windows.Forms.TextBox cinema_email;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button adicionar_sala;
