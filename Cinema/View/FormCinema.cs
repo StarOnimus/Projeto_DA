@@ -28,7 +28,8 @@ namespace Cinema.View
 
         private void adicionar_sala_Click(object sender, EventArgs e)
         {
-
+            SalaController.AddSala(nomeSala_txt.Text, (int)CBnumeroColunas.Value, (int)CBnumeroFilas.Value);
+            listBox1.DataSource = SalaController.GetSala();
         }
 
         private void cinema_change_Click(object sender, EventArgs e)
