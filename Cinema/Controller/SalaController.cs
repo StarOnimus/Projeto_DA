@@ -8,5 +8,6 @@ namespace Cinema.Controller
 {
     internal class SalaController
     {
+
     }
 }

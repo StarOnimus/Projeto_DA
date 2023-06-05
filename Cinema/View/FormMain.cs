@@ -35,5 +35,10 @@ namespace Cinema
             FormCinema gerir_cinemas = new FormCinema();
             gerir_cinemas.ShowDialog();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

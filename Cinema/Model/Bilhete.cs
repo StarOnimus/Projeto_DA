@@ -10,6 +10,7 @@ namespace Cinema.Model
     {
         public int id { get; set; }
         public string nome { get; set; }
+        public int[,] lugar { get; set; }
         public bool activa { get; set; }
 
 
