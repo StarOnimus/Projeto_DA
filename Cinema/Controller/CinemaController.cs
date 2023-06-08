@@ -29,14 +29,11 @@ namespace Cinema.Controller
                 using (var db = new CinemaContext())
                 {
                     Model.Cinema cin = db.Cinemas.FirstOrDefault();
-                    if (cin == null) {
-                        cin = new Model.Cinema { nome = nome1, morada = morada1, email = email1 };
-                        db.Cinemas.Add(cin);
-                    } else {
+                    if (cin != null) {
                         db.Cinemas.Remove(cin);
-                        cin = new Model.Cinema { nome = nome1, morada = morada1, email = email1 };
-                        db.Cinemas.Add(cin);
                     }
+                    cin = new Model.Cinema { nome = nome1, morada = morada1, email = email1 };
+                    db.Cinemas.Add(cin);
                     db.SaveChanges();
                     return true;
                 }

@@ -37,7 +37,7 @@
             this.adicionar = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.eliminar = new System.Windows.Forms.Button();
-            this.editar = new System.Windows.Forms.Button();
+            this.limpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // clienteNome
@@ -90,11 +90,11 @@
             // 
             // adicionar
             // 
-            this.adicionar.Location = new System.Drawing.Point(12, 182);
+            this.adicionar.Location = new System.Drawing.Point(12, 236);
             this.adicionar.Name = "adicionar";
             this.adicionar.Size = new System.Drawing.Size(242, 48);
             this.adicionar.TabIndex = 6;
-            this.adicionar.Text = "Adicionar";
+            this.adicionar.Text = "Adicionar / Editar Cliente";
             this.adicionar.UseVisualStyleBackColor = true;
             this.adicionar.Click += new System.EventHandler(this.adicionar_Click);
             // 
@@ -106,6 +106,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(331, 324);
             this.listBox1.TabIndex = 7;
+            this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
             // 
             // eliminar
             // 
@@ -113,25 +114,26 @@
             this.eliminar.Name = "eliminar";
             this.eliminar.Size = new System.Drawing.Size(242, 48);
             this.eliminar.TabIndex = 8;
-            this.eliminar.Text = "Eliminar";
+            this.eliminar.Text = "Eliminar Cliente";
             this.eliminar.UseVisualStyleBackColor = true;
             this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
             // 
-            // editar
+            // limpar
             // 
-            this.editar.Location = new System.Drawing.Point(12, 236);
-            this.editar.Name = "editar";
-            this.editar.Size = new System.Drawing.Size(242, 48);
-            this.editar.TabIndex = 9;
-            this.editar.Text = "Editar";
-            this.editar.UseVisualStyleBackColor = true;
+            this.limpar.Location = new System.Drawing.Point(12, 165);
+            this.limpar.Name = "limpar";
+            this.limpar.Size = new System.Drawing.Size(242, 34);
+            this.limpar.TabIndex = 9;
+            this.limpar.Text = "Limpar Campos";
+            this.limpar.UseVisualStyleBackColor = true;
+            this.limpar.Click += new System.EventHandler(this.limpar_Click);
             // 
-            // Clientes
+            // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 350);
-            this.Controls.Add(this.editar);
+            this.ClientSize = new System.Drawing.Size(635, 354);
+            this.Controls.Add(this.limpar);
             this.Controls.Add(this.eliminar);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.adicionar);
@@ -141,7 +143,7 @@
             this.Controls.Add(this.clienteNumFisc);
             this.Controls.Add(this.clienteMorada);
             this.Controls.Add(this.clienteNome);
-            this.Name = "Clientes";
+            this.Name = "FormClientes";
             this.Text = "Clientes";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -159,6 +161,6 @@
         private System.Windows.Forms.Button adicionar;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button eliminar;
-        private System.Windows.Forms.Button editar;
+        private System.Windows.Forms.Button limpar;
     }
 }
