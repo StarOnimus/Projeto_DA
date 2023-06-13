@@ -13,9 +13,15 @@ namespace Cinema.Model
         public int[,] lugar { get; set; }
         public int numeroDeLugares { get; set; }
         public List<Sessao> sessoes { get; set; }
+
         public override string ToString()
         {
-            return nome + " " + lugar + " " + numeroDeLugares;
+            return "Sala "+ nome + " Nªlugares " + lugar + numeroDeLugares;
         }
+        public int[,] lugares()
+        {
+            return lugar;
+        }
+
     }
 }

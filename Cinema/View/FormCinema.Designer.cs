@@ -45,8 +45,12 @@
             this.CBnumeroColunas = new System.Windows.Forms.NumericUpDown();
             this.CBnumeroFilas = new System.Windows.Forms.NumericUpDown();
             this.cinema_change = new System.Windows.Forms.Button();
+            this.dataGridViewLugares = new System.Windows.Forms.DataGridView();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CBnumeroColunas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CBnumeroFilas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLugares)).BeginInit();
             this.SuspendLayout();
             // 
             // cinema_nome
@@ -111,6 +115,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(302, 173);
             this.listBox1.TabIndex = 6;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // adicionar_sala
             // 
@@ -208,11 +213,46 @@
             this.cinema_change.UseVisualStyleBackColor = true;
             this.cinema_change.Click += new System.EventHandler(this.cinema_change_Click);
             // 
+            // dataGridViewLugares
+            // 
+            this.dataGridViewLugares.AllowUserToAddRows = false;
+            this.dataGridViewLugares.AllowUserToDeleteRows = false;
+            this.dataGridViewLugares.AllowUserToResizeColumns = false;
+            this.dataGridViewLugares.AllowUserToResizeRows = false;
+            this.dataGridViewLugares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLugares.ColumnHeadersVisible = false;
+            this.dataGridViewLugares.Location = new System.Drawing.Point(19, 197);
+            this.dataGridViewLugares.MultiSelect = false;
+            this.dataGridViewLugares.Name = "dataGridViewLugares";
+            this.dataGridViewLugares.RowHeadersVisible = false;
+            this.dataGridViewLugares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewLugares.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewLugares.TabIndex = 19;
+            this.dataGridViewLugares.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLugares_CellClick);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(51, 142);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(179, 121);
+            this.listBox2.TabIndex = 20;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(126, 279);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(77, 20);
+            this.textBox1.TabIndex = 21;
+            // 
             // FormCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 334);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.dataGridViewLugares);
             this.Controls.Add(this.cinema_change);
             this.Controls.Add(this.CBnumeroFilas);
             this.Controls.Add(this.CBnumeroColunas);
@@ -235,6 +275,7 @@
             this.Text = "FormCinema";
             ((System.ComponentModel.ISupportInitialize)(this.CBnumeroColunas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CBnumeroFilas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLugares)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +300,8 @@
         private System.Windows.Forms.NumericUpDown CBnumeroColunas;
         private System.Windows.Forms.NumericUpDown CBnumeroFilas;
         private System.Windows.Forms.Button cinema_change;
+        private System.Windows.Forms.DataGridView dataGridViewLugares;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

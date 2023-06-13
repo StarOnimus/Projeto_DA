@@ -1,4 +1,4 @@
-﻿using Cinema.Model;
+﻿ using Cinema.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,13 +17,19 @@ namespace Cinema.View
     {
         public FormCinema()
         {
+
             InitializeComponent();
             var cinema = CinemaController.GetCinema();
+            listBox1.DataSource = SalaController.GetSala();
+
             if ( cinema != null ) {
                 cinema_nome.Text = cinema.nome;
                 cinema_morada.Text = cinema.morada;
                 cinema_email.Text = cinema.email;
             }
+
+           
+
         }
 
         private void adicionar_sala_Click(object sender, EventArgs e)
@@ -36,5 +42,40 @@ namespace Cinema.View
         {
             CinemaController.AtualizarCinema(cinema_nome.Text, cinema_morada.Text, cinema_email.Text);
         }
+
+        private void dataGridViewLugares_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+            int selectedRow = e.RowIndex;
+            int selectedColumn = e.ColumnIndex;
+
+            MessageBox.Show($"Posição selecionada: ({selectedRow}, {selectedColumn})");
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var db = new CinemaContext();
+            
+            List<Sala> listaSalas = db.Salas.ToList();
+
+            listBox2.DataSource = listaSalas;
+
+
+            int[,] arraySala = listaS;
+
+            //listBox1.SelectedIndex.
+
+            dataGridViewLugares.ColumnCount = arraySala.GetLength(1);
+            dataGridViewLugares.RowCount = arraySala.GetLength(0);
+
+            for (int row = 0; row < arraySala.GetLength(0); row++)
+            {
+                for (int col = 0; col < arraySala.GetLength(1); col++)
+                {
+                    dataGridViewLugares[col, row].Value = arraySala[row, col];
+                }
+            }
+        }
+
     }
 }
