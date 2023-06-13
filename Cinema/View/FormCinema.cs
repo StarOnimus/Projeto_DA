@@ -59,9 +59,10 @@ namespace Cinema.View
             List<Sala> listaSalas = db.Salas.ToList();
 
             listBox2.DataSource = listaSalas;
+            //falta ir buscar o array dos lugares e por neste arraysala
 
 
-            int[,] arraySala = listaS;
+            int[,] arraySala = d;
 
             //listBox1.SelectedIndex.
 
