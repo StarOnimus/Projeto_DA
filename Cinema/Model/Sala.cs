@@ -16,12 +16,9 @@ namespace Cinema.Model
 
         public override string ToString()
         {
-            return "Sala "+ nome + " Nªlugares " + lugar + numeroDeLugares;
+            return "Sala "+ nome + " Nlugares "+ numeroDeLugares;
         }
-        public int[,] lugares()
-        {
-            return lugar;
-        }
+
 
     }
 }

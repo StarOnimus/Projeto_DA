@@ -31,11 +31,12 @@
             this.cliente = new System.Windows.Forms.Button();
             this.funcionarios = new System.Windows.Forms.Button();
             this.cinema = new System.Windows.Forms.Button();
+            this.Sessao = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cliente
             // 
-            this.cliente.Location = new System.Drawing.Point(684, 12);
+            this.cliente.Location = new System.Drawing.Point(28, 138);
             this.cliente.Name = "cliente";
             this.cliente.Size = new System.Drawing.Size(133, 57);
             this.cliente.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // funcionarios
             // 
-            this.funcionarios.Location = new System.Drawing.Point(684, 75);
+            this.funcionarios.Location = new System.Drawing.Point(28, 75);
             this.funcionarios.Name = "funcionarios";
             this.funcionarios.Size = new System.Drawing.Size(133, 57);
             this.funcionarios.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // cinema
             // 
-            this.cinema.Location = new System.Drawing.Point(684, 138);
+            this.cinema.Location = new System.Drawing.Point(28, 12);
             this.cinema.Name = "cinema";
             this.cinema.Size = new System.Drawing.Size(133, 57);
             this.cinema.TabIndex = 2;
@@ -63,9 +64,20 @@
             this.cinema.UseVisualStyleBackColor = true;
             this.cinema.Click += new System.EventHandler(this.cinema_Click);
             // 
+            // Sessao
+            // 
+            this.Sessao.Location = new System.Drawing.Point(28, 201);
+            this.Sessao.Name = "Sessao";
+            this.Sessao.Size = new System.Drawing.Size(133, 57);
+            this.Sessao.TabIndex = 3;
+            this.Sessao.Text = "Sessão";
+            this.Sessao.UseVisualStyleBackColor = true;
+            this.Sessao.Click += new System.EventHandler(this.Sessao_Click);
+            // 
             // FormMain
             // 
-            this.ClientSize = new System.Drawing.Size(829, 364);
+            this.ClientSize = new System.Drawing.Size(182, 272);
+            this.Controls.Add(this.Sessao);
             this.Controls.Add(this.cinema);
             this.Controls.Add(this.funcionarios);
             this.Controls.Add(this.cliente);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Button cliente;
         private System.Windows.Forms.Button funcionarios;
         private System.Windows.Forms.Button cinema;
+        private System.Windows.Forms.Button Sessao;
     }
 }
 

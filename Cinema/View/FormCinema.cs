@@ -53,29 +53,28 @@ namespace Cinema.View
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var db = new CinemaContext();
-            
-            List<Sala> listaSalas = db.Salas.ToList();
-
-            listBox2.DataSource = listaSalas;
-            //falta ir buscar o array dos lugares e por neste arraysala
-
-
-            int[,] arraySala = d;
-
-            //listBox1.SelectedIndex.
-
-            dataGridViewLugares.ColumnCount = arraySala.GetLength(1);
-            dataGridViewLugares.RowCount = arraySala.GetLength(0);
-
-            for (int row = 0; row < arraySala.GetLength(0); row++)
-            {
-                for (int col = 0; col < arraySala.GetLength(1); col++)
+         {
+             if(listBox1.SelectedItem == null)
                 {
-                    dataGridViewLugares[col, row].Value = arraySala[row, col];
+                    int[,] arraySala;
+                    Sala salaSelecionada = (Sala)listBox1.SelectedItem;
+
+                    arraySala = salaSelecionada.lugar;
+                
+
+                    dataGridViewLugares.ColumnCount = arraySala.GetLength(1);
+                    dataGridViewLugares.RowCount = arraySala.GetLength(0);
+
+                    for (int row = 0; row < arraySala.GetLength(0); row++)
+                    {
+                        for (int col = 0; col < arraySala.GetLength(1); col++)
+                        {
+                            dataGridViewLugares[col, row].Value = arraySala[row, col];
+                        }
+                    }
+
                 }
-            }
+
         }
 
     }

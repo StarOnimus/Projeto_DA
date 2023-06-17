@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using Cinema.Model;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Windows.Forms;
 
 namespace Cinema.Controller
 {
-    internal class ClienteController
+    internal class SessoesController
     {
-        public static List<Cliente> GetClientes()
+        public static List<Sessao> GetSessoes()
         {
             using (var db = new CinemaContext())
             {
@@ -34,7 +33,8 @@ namespace Cinema.Controller
                         cl = new Cliente { nome = nome1, morada = morada1, numFiscal = numFiscalCon };
                         db.Sessao.Add(cl);
                     }
-                    else {
+                    else
+                    {
                         cl.nome = nome1;
                         cl.morada = morada1;
                     }
@@ -68,4 +68,5 @@ namespace Cinema.Controller
             }
         }
     }
+}
 }

@@ -18,7 +18,7 @@ namespace Cinema.Controller
                 return db.Salas.ToList();
             }
         }
-   
+
 
         public static void AddSala(string nome1, int coluna1, int fila1)
         {
@@ -29,9 +29,8 @@ namespace Cinema.Controller
                 {
                     arraySala = new int[coluna1, fila1];
                     int valor = 1;
-                    int totalLugares= coluna1 * fila1;
+                    int totalLugares = coluna1 * fila1;
 
-                    var cl = new Sala { nome = nome1, lugar = arraySala, numeroDeLugares = totalLugares };
 
                     for (int i = 0; i < arraySala.GetLength(0); i++)
                     {
@@ -41,6 +40,8 @@ namespace Cinema.Controller
                             valor++;
                         }
                     }
+                    var cl = new Sala { nome = nome1, lugar = arraySala, numeroDeLugares = totalLugares };
+
 
                     db.Salas.Add(cl);
                     db.SaveChanges();
@@ -51,21 +52,7 @@ namespace Cinema.Controller
                 MessageBox.Show(x.ToString());
             }
         }
-        public static int[,] GetLugares(int coluna1, int fila1)
-        {
-            int[,] arraySala = new int[coluna1, fila1];
-            int valor = 1;
 
-            for (int i = 0; i < coluna1; i++)
-            {
-                for (int j = 0; j < fila1; j++)
-                {
-                    arraySala[i, j] = valor;
-                    valor++;
-                }
-            }
 
-            return arraySala;
-        }
     }
 }

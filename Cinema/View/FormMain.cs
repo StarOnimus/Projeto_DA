@@ -27,7 +27,8 @@ namespace Cinema
 
         private void funcionarios_Click(object sender, EventArgs e)
         {
-
+            FormFuncionarios gerir_funcionarios = new FormFuncionarios();
+            gerir_funcionarios.ShowDialog();
         }
 
         private void cinema_Click(object sender, EventArgs e)
@@ -36,9 +37,10 @@ namespace Cinema
             gerir_cinemas.ShowDialog();
         }
 
-        private void FormMain_Load(object sender, EventArgs e)
+        private void Sessao_Click(object sender, EventArgs e)
         {
-
+            FormSessao gerir_sessao = new FormSessao();
+            gerir_sessao.ShowDialog();
         }
     }
 }

@@ -26,6 +26,9 @@ namespace Cinema
             ClienteController.AddEditClientes(clienteNome.Text, clienteMorada.Text, clienteNumFisc.Text);
             listBox1.DataSource = ClienteController.GetClientes();
             listBox1.ClearSelected();
+            clienteNome.Text = null;
+            clienteMorada.Text = null;
+            clienteNumFisc.Text = null;
         }
 
         private void eliminar_Click(object sender, EventArgs e)
@@ -38,12 +41,6 @@ namespace Cinema
             }
         }
 
-        private void limpar_Click(object sender, EventArgs e)
-        {
-            clienteNome.Text = null;
-            clienteMorada.Text = null;
-            clienteNumFisc.Text = null;
-        }
 
         private void listBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -55,5 +52,6 @@ namespace Cinema
                 clienteNumFisc.Text = cliente.numFiscal.ToString();
             }
         }
+
     }
 }

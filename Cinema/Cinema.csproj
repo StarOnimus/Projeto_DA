@@ -96,6 +96,12 @@
     <Compile Include="View\FormCinema.Designer.cs">
       <DependentUpon>FormCinema.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormSessao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSessao.Designer.cs">
+      <DependentUpon>FormSessao.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\FormCinema.resx">
       <DependentUpon>FormCinema.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +123,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FormSessao.resx">
+      <DependentUpon>FormSessao.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

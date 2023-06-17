@@ -46,8 +46,6 @@
             this.CBnumeroFilas = new System.Windows.Forms.NumericUpDown();
             this.cinema_change = new System.Windows.Forms.Button();
             this.dataGridViewLugares = new System.Windows.Forms.DataGridView();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CBnumeroColunas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CBnumeroFilas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLugares)).BeginInit();
@@ -230,28 +228,11 @@
             this.dataGridViewLugares.TabIndex = 19;
             this.dataGridViewLugares.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLugares_CellClick);
             // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(51, 142);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(179, 121);
-            this.listBox2.TabIndex = 20;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(126, 279);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(77, 20);
-            this.textBox1.TabIndex = 21;
-            // 
             // FormCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 334);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.dataGridViewLugares);
             this.Controls.Add(this.cinema_change);
             this.Controls.Add(this.CBnumeroFilas);
@@ -301,7 +282,5 @@
         private System.Windows.Forms.NumericUpDown CBnumeroFilas;
         private System.Windows.Forms.Button cinema_change;
         private System.Windows.Forms.DataGridView dataGridViewLugares;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
