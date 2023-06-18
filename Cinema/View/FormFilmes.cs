@@ -33,7 +33,7 @@ namespace Cinema.View
             else 
             {
                 CategoriaController.AddEditCategoria(textbox_nome.Text, checkBox1.Checked);
-                listBox1.DataSource = CategoriaController.GetCategorias();
+                listBox1.DataSource = CategoriaController.GetCategoriasTodas();
                 combobox_categoria.DataSource = CategoriaController.GetCategorias();
             }
             textbox_nome.Text = string.Empty;
@@ -51,7 +51,7 @@ namespace Cinema.View
             label_nome.Text = "Nome da Categoria";
             add_fc.Text = "Adicionar/Editar Categoria";
             eliminar_fc.Text = "Eliminar Categoria";
-            listBox1.DataSource = CategoriaController.GetCategorias();
+            listBox1.DataSource = CategoriaController.GetCategoriasTodas();
             listBox1.ClearSelected();
         }
 
@@ -66,6 +66,7 @@ namespace Cinema.View
             add_fc.Text = "Adicionar/Editar Filme";
             eliminar_fc.Text = "Eliminar Filme";
             listBox1.DataSource = FilmeController.GetFilmes();
+            combobox_categoria.DataSource = CategoriaController.GetCategorias();
             listBox1.ClearSelected();
 
         }
@@ -87,7 +88,7 @@ namespace Cinema.View
                 {
                     Categoria categoria = (Categoria)listBox1.SelectedItem;
                     CategoriaController.EliminarCategoria(categoria.id);
-                    listBox1.DataSource = CategoriaController.GetCategorias();
+                    listBox1.DataSource = CategoriaController.GetCategoriasTodas();
                 }
             }
             listBox1.ClearSelected();

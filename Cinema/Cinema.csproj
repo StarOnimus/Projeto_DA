@@ -63,6 +63,7 @@
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Controller\SalaController.cs" />
+    <Compile Include="Controller\SessaoController.cs" />
     <Compile Include="Model\Bilhete.cs" />
     <Compile Include="Model\Categoria.cs" />
     <Compile Include="Model\Cinema.cs" />

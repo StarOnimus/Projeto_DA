@@ -22,26 +22,18 @@ namespace Cinema.Controller
 
         public static void AddSala(string nome1, int coluna1, int fila1)
         {
-            int[,] arraySala;
+            string lugares = "";
             try
             {
                 using (var db = new CinemaContext())
                 {
-                    arraySala = new int[coluna1, fila1];
-                    int valor = 1;
                     int totalLugares = coluna1 * fila1;
 
-
-                    for (int i = 0; i < arraySala.GetLength(0); i++)
+                    for (int i = 0; i < totalLugares; i++)
                     {
-                        for (int j = 0; j < arraySala.GetLength(1); j++)
-                        {
-                            arraySala[i, j] = valor;
-                            valor++;
-                        }
+                        lugares += "0";
                     }
-                    var cl = new Sala { nome = nome1, lugar = arraySala, numeroDeLugares = totalLugares };
-
+                    var cl = new Sala { nome = nome1, fila = fila1, coluna = coluna1, lugares = lugares };
 
                     db.Salas.Add(cl);
                     db.SaveChanges();
@@ -53,6 +45,21 @@ namespace Cinema.Controller
             }
         }
 
+        public static void AddSessaoToSala(Sessao sessao, Sala sala)
+        {
+            try
+            {
+                using (var db = new CinemaContext())
+                {
+                    sala.sessoes = new List<Sessao> {sessao};
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.ToString());
+            }
+        }
 
     }
 }

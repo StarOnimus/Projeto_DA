@@ -53,29 +53,30 @@ namespace Cinema.View
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-         {
-             if(listBox1.SelectedItem == null)
-                {
-                    int[,] arraySala;
-                    Sala salaSelecionada = (Sala)listBox1.SelectedItem;
-
-                    arraySala = salaSelecionada.lugar;
-                
-
-                    dataGridViewLugares.ColumnCount = arraySala.GetLength(1);
-                    dataGridViewLugares.RowCount = arraySala.GetLength(0);
-
-                    for (int row = 0; row < arraySala.GetLength(0); row++)
-                    {
-                        for (int col = 0; col < arraySala.GetLength(1); col++)
-                        {
-                            dataGridViewLugares[col, row].Value = arraySala[row, col];
-                        }
-                    }
-
-                }
-
+        {
         }
 
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                Sala salaSelecionada = (Sala)listBox1.SelectedItem;
+
+                dataGridViewLugares.ColumnCount = salaSelecionada.coluna;
+                dataGridViewLugares.RowCount = salaSelecionada.fila;
+
+                int value = 0;
+
+                for (int row = 0; row < salaSelecionada.fila; row++)
+                {
+                    for (int col = 0; col < salaSelecionada.coluna; col++)
+                    {
+                        dataGridViewLugares[col, row].Value = salaSelecionada.lugares[value];
+                        value++;
+                    }
+                }
+
+            }
+        }
     }
 }

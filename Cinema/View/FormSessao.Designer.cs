@@ -31,16 +31,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.clienteMorada = new System.Windows.Forms.TextBox();
-            this.clienteNome = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.preco = new System.Windows.Forms.TextBox();
+            this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.add_sessao = new System.Windows.Forms.Button();
+            this.combo_filme = new System.Windows.Forms.ComboBox();
+            this.combo_sala = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 117);
+            this.label3.Location = new System.Drawing.Point(12, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 16);
             this.label3.TabIndex = 11;
@@ -64,36 +66,28 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Filme: ";
             // 
-            // clienteMorada
+            // preco
             // 
-            this.clienteMorada.Location = new System.Drawing.Point(12, 89);
-            this.clienteMorada.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.clienteMorada.Name = "clienteMorada";
-            this.clienteMorada.Size = new System.Drawing.Size(241, 22);
-            this.clienteMorada.TabIndex = 7;
+            this.preco.Location = new System.Drawing.Point(12, 89);
+            this.preco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.preco.Name = "preco";
+            this.preco.Size = new System.Drawing.Size(241, 22);
+            this.preco.TabIndex = 7;
             // 
-            // clienteNome
+            // dateTime
             // 
-            this.clienteNome.Location = new System.Drawing.Point(15, 36);
-            this.clienteNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.clienteNome.Name = "clienteNome";
-            this.clienteNome.Size = new System.Drawing.Size(239, 22);
-            this.clienteNome.TabIndex = 6;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 150);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2023, 6, 17, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(219, 22);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dateTime.Location = new System.Drawing.Point(12, 198);
+            this.dateTime.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTime.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dateTime.MinDate = new System.DateTime(2023, 6, 17, 0, 0, 0, 0);
+            this.dateTime.Name = "dateTime";
+            this.dateTime.Size = new System.Drawing.Size(242, 22);
+            this.dateTime.TabIndex = 12;
             // 
             // add_sessao
             // 
-            this.add_sessao.Location = new System.Drawing.Point(5, 215);
-            this.add_sessao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.add_sessao.Location = new System.Drawing.Point(12, 228);
+            this.add_sessao.Margin = new System.Windows.Forms.Padding(4);
             this.add_sessao.Name = "add_sessao";
             this.add_sessao.Size = new System.Drawing.Size(249, 43);
             this.add_sessao.TabIndex = 13;
@@ -101,19 +95,46 @@
             this.add_sessao.UseVisualStyleBackColor = true;
             this.add_sessao.Click += new System.EventHandler(this.add_sessao_Click);
             // 
+            // combo_filme
+            // 
+            this.combo_filme.FormattingEnabled = true;
+            this.combo_filme.Location = new System.Drawing.Point(15, 43);
+            this.combo_filme.Name = "combo_filme";
+            this.combo_filme.Size = new System.Drawing.Size(239, 24);
+            this.combo_filme.TabIndex = 14;
+            // 
+            // combo_sala
+            // 
+            this.combo_sala.FormattingEnabled = true;
+            this.combo_sala.Location = new System.Drawing.Point(12, 150);
+            this.combo_sala.Name = "combo_sala";
+            this.combo_sala.Size = new System.Drawing.Size(239, 24);
+            this.combo_sala.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 16);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Sala: ";
+            // 
             // FormSessao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 305);
+            this.ClientSize = new System.Drawing.Size(602, 323);
+            this.Controls.Add(this.combo_sala);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.combo_filme);
             this.Controls.Add(this.add_sessao);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTime);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.clienteMorada);
-            this.Controls.Add(this.clienteNome);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.preco);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSessao";
             this.Text = "FormSessao";
             this.Load += new System.EventHandler(this.FormSessao_Load);
@@ -127,9 +148,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox clienteMorada;
-        private System.Windows.Forms.TextBox clienteNome;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox preco;
+        private System.Windows.Forms.DateTimePicker dateTime;
         private System.Windows.Forms.Button add_sessao;
+        private System.Windows.Forms.ComboBox combo_filme;
+        private System.Windows.Forms.ComboBox combo_sala;
+        private System.Windows.Forms.Label label4;
     }
 }

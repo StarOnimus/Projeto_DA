@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cinema.Controller;
+using Cinema.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +17,10 @@ namespace Cinema.View
         public FormSessao()
         {
             InitializeComponent();
-
             DateTime dtaMIN = DateTime.Today.AddDays(1);
-            dateTimePicker1.MinDate = dtaMIN;
+            dateTime.MinDate = dtaMIN;
+            combo_filme.DataSource = FilmeController.GetFilmes();
+            combo_sala.DataSource = SalaController.GetSala();
         }
 
         private void FormSessao_Load(object sender, EventArgs e)
@@ -27,7 +30,7 @@ namespace Cinema.View
 
         private void add_sessao_Click(object sender, EventArgs e)
         {
-
+            SalaController.AddSessaoToSala(SessaoController.AddEditSessoes(preco.Text, dateTime.Value, (Filme)combo_filme.SelectedItem), (Sala)combo_sala.SelectedItem);
         }
     }
 }

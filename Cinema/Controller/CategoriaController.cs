@@ -61,6 +61,14 @@ namespace Cinema.Controller
             }
         }
 
+        public static List<Categoria> GetCategoriasTodas()
+        {
+            using (var db = new CinemaContext())
+            {
+                return db.Categorias.ToList();
+            }
+        }
+
         public static void AddEditCategoria(string nome1, bool active1)
         {
             try
