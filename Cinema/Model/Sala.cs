@@ -17,7 +17,7 @@ namespace Cinema.Model
 
         public override string ToString()
         {
-            return "Sala "+ nome;
+            return nome;
         }
 
 

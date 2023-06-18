@@ -30,7 +30,9 @@ namespace Cinema.View
 
         private void add_sessao_Click(object sender, EventArgs e)
         {
-            SalaController.AddSessaoToSala(SessaoController.AddEditSessoes(preco.Text, dateTime.Value, (Filme)combo_filme.SelectedItem), (Sala)combo_sala.SelectedItem);
+            SessaoController.AddEditSessoes(preco.Text, dateTime.Value, (Filme)combo_filme.SelectedItem);
+            SalaController.AddSessaoToSala(dateTime.Value, combo_sala.SelectedItem.ToString(), (Filme)combo_filme.SelectedItem);
+            listBox1.DataSource = SessaoController.GetSessoes();
         }
     }
 }

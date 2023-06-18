@@ -43,5 +43,20 @@ namespace Cinema.Controller
                 return false;
             }
         }
+        public static void AddToList(string nome1)
+        {
+            try
+            {
+                using (var db = new CinemaContext())
+                {
+                    Model.Cinema cin = db.Cinemas.FirstOrDefault();
+                    cin.Salas = new List<Sala> { db.Salas.Where((x) => x.nome == nome1).FirstOrDefault() };
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+            }
+        }
     }
 }

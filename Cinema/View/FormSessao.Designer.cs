@@ -37,6 +37,7 @@
             this.combo_filme = new System.Windows.Forms.ComboBox();
             this.combo_sala = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label3
@@ -120,11 +121,21 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Sala: ";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(286, 43);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(292, 228);
+            this.listBox1.TabIndex = 17;
+            // 
             // FormSessao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 323);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.combo_sala);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.combo_filme);
@@ -154,5 +165,6 @@
         private System.Windows.Forms.ComboBox combo_filme;
         private System.Windows.Forms.ComboBox combo_sala;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

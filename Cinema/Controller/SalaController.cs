@@ -45,13 +45,14 @@ namespace Cinema.Controller
             }
         }
 
-        public static void AddSessaoToSala(Sessao sessao, Sala sala)
+        public static void AddSessaoToSala(DateTime sessao, string sala, Filme filme)
         {
             try
             {
                 using (var db = new CinemaContext())
                 {
-                    sala.sessoes = new List<Sessao> {sessao};
+                    Sala sl = db.Salas.Where((x) => x.nome == sala).FirstOrDefault();
+                    sl.sessoes = new List<Sessao> { db.Sessoes.Where((x) => x.dtaHora == sessao).FirstOrDefault() };
                     db.SaveChanges();
                 }
             }
