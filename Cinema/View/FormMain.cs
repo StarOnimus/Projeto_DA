@@ -42,5 +42,11 @@ namespace Cinema
             FormSessao gerir_sessao = new FormSessao();
             gerir_sessao.ShowDialog();
         }
+
+        private void add_filme_Click(object sender, EventArgs e)
+        {
+            FormFilmes gerir_filmes = new FormFilmes();
+            gerir_filmes.ShowDialog();
+        }
     }
 }

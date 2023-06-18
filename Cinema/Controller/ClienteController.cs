@@ -15,7 +15,7 @@ namespace Cinema.Controller
         {
             using (var db = new CinemaContext())
             {
-                return db.Sessao.ToList();
+                return db.Clientes.ToList();
             }
         }
 
@@ -28,11 +28,11 @@ namespace Cinema.Controller
                     throw new Exception("Número fiscal inválido!");
                 using (var db = new CinemaContext())
                 {
-                    Cliente cl = db.Sessao.Where((x) => x.numFiscal == numFiscalCon).FirstOrDefault();
+                    Cliente cl = db.Clientes.Where((x) => x.numFiscal == numFiscalCon).FirstOrDefault();
                     if (cl == null)
                     {
                         cl = new Cliente { nome = nome1, morada = morada1, numFiscal = numFiscalCon };
-                        db.Sessao.Add(cl);
+                        db.Clientes.Add(cl);
                     }
                     else {
                         cl.nome = nome1;
@@ -57,8 +57,8 @@ namespace Cinema.Controller
             {
                 using (var db = new CinemaContext())
                 {
-                    Cliente cl = db.Sessao.Where((x) => x.id == id1).FirstOrDefault();
-                    db.Sessao.Remove(cl);
+                    Cliente cl = db.Clientes.Where((x) => x.id == id1).FirstOrDefault();
+                    db.Clientes.Remove(cl);
                     db.SaveChanges();
                 }
             }

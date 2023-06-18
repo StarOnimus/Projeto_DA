@@ -12,12 +12,12 @@ namespace Cinema.Model
         public string nome { get; set; }
         public int duracao { get; set; }
         public bool activo { get; set; }
-        public Categoria Categoria { get; set; }
+        public Categoria categoria { get; set; }
 
 
         public override string ToString()
         {
-            return nome + " " + duracao + " " + activo;
+            return "Titulo: " +nome + "  Minutos: " + duracao + "  Status: " + activo;
         }
     }
 }

@@ -25,7 +25,7 @@ namespace Cinema.View
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void add_sessao_Click(object sender, EventArgs e)
         {
 
         }

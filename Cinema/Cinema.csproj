@@ -56,8 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CategoriaController.cs" />
     <Compile Include="Controller\CinemaController.cs" />
     <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\FilmeController.cs" />
+    <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Controller\SalaController.cs" />
     <Compile Include="Model\Bilhete.cs" />
@@ -68,6 +71,12 @@
     <Compile Include="Model\Filme.cs" />
     <Compile Include="Model\Sala.cs" />
     <Compile Include="Model\Sessao.cs" />
+    <Compile Include="View\FormFilmes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFilmes.Designer.cs">
+      <DependentUpon>FormFilmes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormFilmes.resx">
+      <DependentUpon>FormFilmes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormFuncionarios.resx">
       <DependentUpon>FormFuncionarios.cs</DependentUpon>
