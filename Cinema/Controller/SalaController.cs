@@ -52,7 +52,11 @@ namespace Cinema.Controller
                 using (var db = new CinemaContext())
                 {
                     Sala sl = db.Salas.Where((x) => x.nome == sala).FirstOrDefault();
-                    sl.sessoes = new List<Sessao> { db.Sessoes.Where((x) => x.dtaHora == sessao).FirstOrDefault() };
+                    Sessao ss = db.Sessoes.Where((x) => x.dtaHora == sessao).FirstOrDefault();
+                    List<Sessao> lista = new List<Sessao>();
+                    lista = sl.sessoes;
+                    lista.Append(ss).ToList();
+                    sl.sessoes = lista;
                     db.SaveChanges();
                 }
             }
@@ -62,5 +66,13 @@ namespace Cinema.Controller
             }
         }
 
+        public static Sala ReturnSalaFromSessao(Sessao sessao)
+        {
+            using (var db = new CinemaContext())
+            {
+                Sala sl = db.Salas.Where((x) => x.sessoes.Any((i) => i.id == sessao.id)).FirstOrDefault();
+                return sl;
+            }
+        }
     }
 }

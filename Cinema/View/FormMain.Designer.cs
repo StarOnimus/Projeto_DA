@@ -33,6 +33,10 @@
             this.cinema = new System.Windows.Forms.Button();
             this.Sessao = new System.Windows.Forms.Button();
             this.add_filme = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.combo_funci = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cliente
@@ -85,9 +89,49 @@
             this.add_filme.UseVisualStyleBackColor = true;
             this.add_filme.Click += new System.EventHandler(this.add_filme_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(108, 54);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(421, 228);
+            this.listBox1.TabIndex = 5;
+            this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseDoubleClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(105, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(253, 16);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Selecione com duplo clique uma sessão.";
+            // 
+            // combo_funci
+            // 
+            this.combo_funci.FormattingEnabled = true;
+            this.combo_funci.Location = new System.Drawing.Point(108, 335);
+            this.combo_funci.Name = "combo_funci";
+            this.combo_funci.Size = new System.Drawing.Size(421, 24);
+            this.combo_funci.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(105, 316);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 16);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Em utilização por:";
+            // 
             // FormMain
             // 
             this.ClientSize = new System.Drawing.Size(843, 371);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.combo_funci);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.add_filme);
             this.Controls.Add(this.Sessao);
             this.Controls.Add(this.cinema);
@@ -95,6 +139,7 @@
             this.Controls.Add(this.cliente);
             this.Name = "FormMain";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,6 +153,10 @@
         private System.Windows.Forms.Button cinema;
         private System.Windows.Forms.Button Sessao;
         private System.Windows.Forms.Button add_filme;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox combo_funci;
+        private System.Windows.Forms.Label label3;
     }
 }
 

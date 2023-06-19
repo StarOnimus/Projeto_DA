@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cinema_nome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,10 +45,8 @@
             this.CBnumeroColunas = new System.Windows.Forms.NumericUpDown();
             this.CBnumeroFilas = new System.Windows.Forms.NumericUpDown();
             this.cinema_change = new System.Windows.Forms.Button();
-            this.dataGridViewLugares = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.CBnumeroColunas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CBnumeroFilas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLugares)).BeginInit();
             this.SuspendLayout();
             // 
             // cinema_nome
@@ -112,7 +109,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(401, 212);
             this.listBox1.TabIndex = 6;
-            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // adicionar_sala
             // 
@@ -207,40 +203,11 @@
             this.cinema_change.UseVisualStyleBackColor = true;
             this.cinema_change.Click += new System.EventHandler(this.cinema_change_Click);
             // 
-            // dataGridViewLugares
-            // 
-            this.dataGridViewLugares.AllowUserToAddRows = false;
-            this.dataGridViewLugares.AllowUserToDeleteRows = false;
-            this.dataGridViewLugares.AllowUserToResizeColumns = false;
-            this.dataGridViewLugares.AllowUserToResizeRows = false;
-            this.dataGridViewLugares.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewLugares.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLugares.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewLugares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLugares.ColumnHeadersVisible = false;
-            this.dataGridViewLugares.Location = new System.Drawing.Point(25, 242);
-            this.dataGridViewLugares.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridViewLugares.Name = "dataGridViewLugares";
-            this.dataGridViewLugares.RowHeadersVisible = false;
-            this.dataGridViewLugares.RowHeadersWidth = 51;
-            this.dataGridViewLugares.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewLugares.Size = new System.Drawing.Size(320, 148);
-            this.dataGridViewLugares.TabIndex = 19;
-            this.dataGridViewLugares.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLugares_CellClick);
-            // 
             // FormCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 411);
-            this.Controls.Add(this.dataGridViewLugares);
             this.Controls.Add(this.cinema_change);
             this.Controls.Add(this.CBnumeroFilas);
             this.Controls.Add(this.CBnumeroColunas);
@@ -263,7 +230,6 @@
             this.Text = "FormCinema";
             ((System.ComponentModel.ISupportInitialize)(this.CBnumeroColunas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CBnumeroFilas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLugares)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,6 +254,5 @@
         private System.Windows.Forms.NumericUpDown CBnumeroColunas;
         private System.Windows.Forms.NumericUpDown CBnumeroFilas;
         private System.Windows.Forms.Button cinema_change;
-        private System.Windows.Forms.DataGridView dataGridViewLugares;
     }
 }

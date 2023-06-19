@@ -22,10 +22,15 @@ namespace Cinema.View
             var cinema = CinemaController.GetCinema();
             listBox1.DataSource = SalaController.GetSala();
 
-            if ( cinema != null ) {
+            if (cinema != null)
+            {
                 cinema_nome.Text = cinema.nome;
                 cinema_morada.Text = cinema.morada;
                 cinema_email.Text = cinema.email;
+            }
+            else
+            {
+                adicionar_sala.Enabled = false;
             }
 
            
@@ -59,25 +64,6 @@ namespace Cinema.View
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem != null)
-            {
-                Sala salaSelecionada = (Sala)listBox1.SelectedItem;
-
-                dataGridViewLugares.ColumnCount = salaSelecionada.coluna;
-                dataGridViewLugares.RowCount = salaSelecionada.fila;
-
-                int value = 0;
-
-                for (int row = 0; row < salaSelecionada.fila; row++)
-                {
-                    for (int col = 0; col < salaSelecionada.coluna; col++)
-                    {
-                        dataGridViewLugares[col, row].Value = salaSelecionada.lugares[value];
-                        value++;
-                    }
-                }
-
-            }
         }
     }
 }

@@ -43,7 +43,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 153);
+            this.label3.Location = new System.Drawing.Point(12, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 16);
             this.label3.TabIndex = 11;
@@ -107,7 +107,7 @@
             // combo_sala
             // 
             this.combo_sala.FormattingEnabled = true;
-            this.combo_sala.Location = new System.Drawing.Point(12, 150);
+            this.combo_sala.Location = new System.Drawing.Point(12, 140);
             this.combo_sala.Name = "combo_sala";
             this.combo_sala.Size = new System.Drawing.Size(239, 24);
             this.combo_sala.TabIndex = 16;
@@ -115,7 +115,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 124);
+            this.label4.Location = new System.Drawing.Point(12, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 15;

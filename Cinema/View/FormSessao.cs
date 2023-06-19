@@ -17,8 +17,8 @@ namespace Cinema.View
         public FormSessao()
         {
             InitializeComponent();
-            DateTime dtaMIN = DateTime.Today.AddDays(1);
-            dateTime.MinDate = dtaMIN;
+            DateTime dtaMIN = DateTime.Now.AddDays(1);
+            dateTime.Value = dtaMIN;
             combo_filme.DataSource = FilmeController.GetFilmes();
             combo_sala.DataSource = SalaController.GetSala();
         }
