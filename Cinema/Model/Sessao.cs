@@ -11,12 +11,11 @@ namespace Cinema.Model
         public int id { get; set; }
         public DateTime dtaHora { get; set; }
         public float preco { get; set; }
-        public List<Bilhete> Bilhetes { get; set; }
         public Filme filme { get; set; }
 
         public override string ToString()
         {
-            return dtaHora + " " + preco;
+            return id.ToString() + " " + dtaHora + " " + preco;
         }
     }
 }

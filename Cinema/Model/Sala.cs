@@ -13,7 +13,7 @@ namespace Cinema.Model
         public int fila { get; set; }
         public int coluna { get; set; }
         public string lugares { get; set; }
-        public List<Sessao> sessoes { get; set; }
+        public string sessoes { get; set; }
 
         public override string ToString()
         {

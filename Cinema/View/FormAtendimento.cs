@@ -4,11 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cinema.View
 {
@@ -17,6 +20,7 @@ namespace Cinema.View
         public FormAtendimento(object ss)
         {
             InitializeComponent();
+            comboBox1.DataSource = ClienteController.GetClientes();
             Sessao sessao = (Sessao)ss;
             if (sessao != null)
             {
@@ -49,9 +53,27 @@ namespace Cinema.View
 
         private void criar_bilhete_Click(object sender, EventArgs e)
         {
-            foreach (DataGridCell cell in dataGridView1.SelectedCells) 
+
+            FormMain f1 = new FormMain();
+            foreach (DataGridViewTextBoxCell cell in dataGridView1.SelectedCells)
             {
-                MessageBox.Show(cell.ToString());
+                if (dataGridView1.Rows[cell.RowIndex].Cells[cell.ColumnIndex].Style.BackColor == Color.Gray)
+                {
+                    AtendimentoController.CreateBilhetes((Cliente)comboBox1.SelectedItem, cell.RowIndex, cell.ColumnIndex, true, (Funcionario)f1.combo_funci.SelectedItem, (Sessao)f1.listBox1.SelectedItem);
+                    dataGridView1.Rows[cell.RowIndex].Cells[cell.ColumnIndex].Style.BackColor = Color.Green;
+                    Sala sl = SalaController.ReturnSalaFromSessao((Sessao)f1.listBox1.SelectedItem);
+
+                    int value = 0;
+                    for (int row = 0; row < cell.RowIndex; row++)
+                    {
+                        for (int col = 0; col < cell.ColumnIndex; col++)
+                        {
+                            value++;
+                        }
+                    }
+                    MessageBox.Show(value.ToString());
+                    SalaController.ocupado(sl, value);
+                }
             }
         }
     }

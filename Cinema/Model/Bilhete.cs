@@ -9,14 +9,15 @@ namespace Cinema.Model
     internal class Bilhete
     {
         public int id { get; set; }
-        public string nome { get; set; }
-        public int[,] lugar { get; set; }
+        public Cliente cliente { get; set; }
+        public string lugar { get; set; }
         public bool activa { get; set; }
-
+        public Funcionario funcionario { get; set; }
+        public Sessao sessao { get; set; }
 
         public override string ToString()
         {
-            return nome + " " + activa;
+            return " " + activa;
         }
     }
 }

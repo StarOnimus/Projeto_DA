@@ -47,6 +47,8 @@ namespace Cinema.View
         private void cinema_change_Click(object sender, EventArgs e)
         {
             CinemaController.AtualizarCinema(cinema_nome.Text, cinema_morada.Text, cinema_email.Text);
+            adicionar_sala.Enabled = true;
+
         }
 
         private void dataGridViewLugares_CellClick(object sender, DataGridViewCellEventArgs e)

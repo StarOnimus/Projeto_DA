@@ -38,6 +38,7 @@
             this.combo_sala = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.del_sess = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -87,12 +88,12 @@
             // 
             // add_sessao
             // 
-            this.add_sessao.Location = new System.Drawing.Point(12, 228);
+            this.add_sessao.Location = new System.Drawing.Point(15, 241);
             this.add_sessao.Margin = new System.Windows.Forms.Padding(4);
             this.add_sessao.Name = "add_sessao";
             this.add_sessao.Size = new System.Drawing.Size(249, 43);
             this.add_sessao.TabIndex = 13;
-            this.add_sessao.Text = "Criar Sessão";
+            this.add_sessao.Text = "Criar/Editar Sessão";
             this.add_sessao.UseVisualStyleBackColor = true;
             this.add_sessao.Click += new System.EventHandler(this.add_sessao_Click);
             // 
@@ -127,14 +128,26 @@
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(286, 43);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(292, 228);
+            this.listBox1.Size = new System.Drawing.Size(292, 292);
             this.listBox1.TabIndex = 17;
+            // 
+            // del_sess
+            // 
+            this.del_sess.Location = new System.Drawing.Point(12, 292);
+            this.del_sess.Margin = new System.Windows.Forms.Padding(4);
+            this.del_sess.Name = "del_sess";
+            this.del_sess.Size = new System.Drawing.Size(249, 43);
+            this.del_sess.TabIndex = 18;
+            this.del_sess.Text = "Eliminar Sessão";
+            this.del_sess.UseVisualStyleBackColor = true;
+            this.del_sess.Click += new System.EventHandler(this.del_sess_Click);
             // 
             // FormSessao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 323);
+            this.ClientSize = new System.Drawing.Size(602, 356);
+            this.Controls.Add(this.del_sess);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.combo_sala);
             this.Controls.Add(this.label4);
@@ -166,5 +179,6 @@
         private System.Windows.Forms.ComboBox combo_sala;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button del_sess;
     }
 }

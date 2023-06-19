@@ -138,6 +138,7 @@
             this.Controls.Add(this.funcionarios);
             this.Controls.Add(this.cliente);
             this.Name = "FormMain";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,10 +154,10 @@
         private System.Windows.Forms.Button cinema;
         private System.Windows.Forms.Button Sessao;
         private System.Windows.Forms.Button add_filme;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox combo_funci;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.ListBox listBox1;
+        public System.Windows.Forms.ComboBox combo_funci;
     }
 }
 

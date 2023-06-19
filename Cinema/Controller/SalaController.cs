@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,18 +46,15 @@ namespace Cinema.Controller
             }
         }
 
-        public static void AddSessaoToSala(DateTime sessao, string sala, Filme filme)
+        public static void AddSessaoToSala(Sessao sessao, Sala sala)
         {
             try
             {
                 using (var db = new CinemaContext())
                 {
-                    Sala sl = db.Salas.Where((x) => x.nome == sala).FirstOrDefault();
-                    Sessao ss = db.Sessoes.Where((x) => x.dtaHora == sessao).FirstOrDefault();
-                    List<Sessao> lista = new List<Sessao>();
-                    lista = sl.sessoes;
-                    lista.Append(ss).ToList();
-                    sl.sessoes = lista;
+                    Sala sl = db.Salas.Where((x) => x.id == sala.id).FirstOrDefault();
+                    Sessao ss = db.Sessoes.Where((x) => x.id == sessao.id).FirstOrDefault();
+                    sl.sessoes += "id:" + ss.id + ",";
                     db.SaveChanges();
                 }
             }
@@ -70,8 +68,21 @@ namespace Cinema.Controller
         {
             using (var db = new CinemaContext())
             {
-                Sala sl = db.Salas.Where((x) => x.sessoes.Any((i) => i.id == sessao.id)).FirstOrDefault();
+                Sala sl = db.Salas.Where((x) => x.sessoes.Contains("id:"+sessao.id+",")).FirstOrDefault();
                 return sl;
+            }
+        }
+
+        public static void ocupado(Sala sala,int num)
+        {
+            using (var db = new CinemaContext())
+            {
+                Sala sl = db.Salas.Where((x) => x.id == sala.id).FirstOrDefault();
+                StringBuilder sb = new StringBuilder(sl.lugares);
+                sb[num] = char.Parse("1");
+                MessageBox.Show(sb.ToString());
+                sl.lugares = sb.ToString();
+                db.SaveChanges();
             }
         }
     }

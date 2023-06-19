@@ -5,37 +5,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Cinema.Controller
 {
     internal class AtendimentoController
     {
-        public static void AddEditClientes(string nome1, string morada1, string numFisc1)
+        public static void CreateBilhetes(Cliente cliente, int coluna, int fila, bool status, Funcionario funcionario, Sessao sessao)
         {
             try
             {
-                int numFiscalCon = Int32.Parse(numFisc1);
-                if (numFiscalCon < 100000000 || numFiscalCon > 999999999)
-                    throw new Exception("Número fiscal inválido!");
                 using (var db = new CinemaContext())
                 {
-                    Cliente cl = db.Clientes.Where((x) => x.numFiscal == numFiscalCon).FirstOrDefault();
-                    if (cl == null)
-                    {
-                        cl = new Cliente { nome = nome1, morada = morada1, numFiscal = numFiscalCon };
-                        db.Clientes.Add(cl);
-                    }
-                    else
-                    {
-                        cl.nome = nome1;
-                        cl.morada = morada1;
-                    }
+                    Cliente cl = db.Clientes.Where((x) => x.id == cliente.id).FirstOrDefault();
+                    Funcionario ff = db.Funcionarios.Where((x) => x.id == funcionario.id).FirstOrDefault();
+                    Sessao ss = db.Sessoes.Where((x) => x.id == sessao.id).FirstOrDefault();
+
+                    Bilhete b = new Bilhete { activa = status, cliente = cl, funcionario = ff, sessao = ss, lugar = fila+""+coluna};
+
+                    db.Bilhetes.Add(b);
                     db.SaveChanges();
+
+                    StreamWriter sw = new StreamWriter(b.id.ToString()+ ".txt");
+                    sw.WriteLine(cl.nome + "\n"+ ss.dtaHora + "\n\n"+ ff);
+                    sw.Close();
                 }
-            }
-            catch (OverflowException)
-            {
-                MessageBox.Show("Número fiscal inválido!");
             }
             catch (Exception x)
             {

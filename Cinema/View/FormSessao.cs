@@ -21,6 +21,7 @@ namespace Cinema.View
             dateTime.Value = dtaMIN;
             combo_filme.DataSource = FilmeController.GetFilmes();
             combo_sala.DataSource = SalaController.GetSala();
+            listBox1.DataSource = SessaoController.GetSessoes();
         }
 
         private void FormSessao_Load(object sender, EventArgs e)
@@ -30,9 +31,27 @@ namespace Cinema.View
 
         private void add_sessao_Click(object sender, EventArgs e)
         {
-            SessaoController.AddEditSessoes(preco.Text, dateTime.Value, (Filme)combo_filme.SelectedItem);
-            SalaController.AddSessaoToSala(dateTime.Value, combo_sala.SelectedItem.ToString(), (Filme)combo_filme.SelectedItem);
+            DateTime dtaMIN = DateTime.Now.AddDays(1);
+            dateTime.Value = dtaMIN;
+            SalaController.AddSessaoToSala(SessaoController.AddEditSessoes(preco.Text, dateTime.Value, (Filme)combo_filme.SelectedItem), (Sala)combo_sala.SelectedItem);
             listBox1.DataSource = SessaoController.GetSessoes();
+
+            FormMain f1 = new FormMain();
+            f1.update_list();
+        }
+
+        private void del_sess_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                Sessao ss = (Sessao)listBox1.SelectedItem;
+                SessaoController.EliminarSessao(ss.id);
+                listBox1.DataSource = SessaoController.GetSessoes();
+                listBox1.ClearSelected();
+
+                FormMain f1 = new FormMain();
+                f1.update_list();
+            }
         }
     }
 }

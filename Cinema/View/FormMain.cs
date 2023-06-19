@@ -19,7 +19,7 @@ namespace Cinema
         public FormMain()
         {
             InitializeComponent();
-            listBox1.DataSource = SessaoController.GetSessoes();
+            update_list();
             combo_funci.DataSource = FuncionarioController.GetFuncionarios();
         }
 
@@ -61,6 +61,16 @@ namespace Cinema
                 FormAtendimento criar_bilhete = new FormAtendimento(sessao);
                 criar_bilhete.ShowDialog();
             }
+        }
+
+        public void update_list() 
+        {
+            listBox1.DataSource = SessaoController.GetSessoes();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
