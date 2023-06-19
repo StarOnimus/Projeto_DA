@@ -45,6 +45,23 @@ namespace Cinema.Controller
                 MessageBox.Show(x.ToString());
             }
         }
+        public static void EliminarSala(int id1)
+        {
+            try
+            {
+                using (var db = new CinemaContext())
+                {
+                    
+                    Sala sl = db.Salas.Where((x) => x.id == id1).FirstOrDefault();
+                    db.Salas.Remove(sl);
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.ToString());
+            }
+        }
 
         public static void AddSessaoToSala(Sessao sessao, Sala sala)
         {

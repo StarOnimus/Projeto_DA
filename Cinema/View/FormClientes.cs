@@ -39,6 +39,8 @@ namespace Cinema
                 listBox1.DataSource = ClienteController.GetClientes();
                 listBox1.ClearSelected();
             }
+            MessageBox.Show("Cliente eliminado com sucesso", "Sucesso", MessageBoxButtons.OK);
+
         }
 
 

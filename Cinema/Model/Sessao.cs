@@ -15,7 +15,7 @@ namespace Cinema.Model
 
         public override string ToString()
         {
-            return id.ToString() + " " + dtaHora + " " + preco;
+            return "ID: "+ id.ToString() + " Horario: " + dtaHora + " Preço: " + preco +" €";
         }
     }
 }

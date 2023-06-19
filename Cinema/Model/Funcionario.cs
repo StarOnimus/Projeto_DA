@@ -15,7 +15,7 @@ namespace Cinema.Model
 
         public override string ToString()
         {
-            return nome + " " + funcao;
+            return "Nome: "+ nome + " Função: " + funcao;
         }
     }
 }

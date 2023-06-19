@@ -48,6 +48,10 @@ namespace Cinema.View
         {
             CinemaController.AtualizarCinema(cinema_nome.Text, cinema_morada.Text, cinema_email.Text);
             adicionar_sala.Enabled = true;
+            MessageBox.Show("Cinema adicionado/editado com sucesso", "Sucesso",MessageBoxButtons.OK);
+            cinema_nome.Text = "";
+            cinema_morada.Text = "";
+            cinema_email.Text = "";
 
         }
 
@@ -66,6 +70,29 @@ namespace Cinema.View
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
+            var sala = (Sala)listBox1.SelectedItem;
+            if (sala != null)
+            {
+                nomeSala_txt.Text = sala.nome;
+
+            }
+        }
+
+        private void editar_sala_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eliminar_sala_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                Sala sala = (Sala)listBox1.SelectedItem;
+                SalaController.EliminarSala(sala.id);
+                listBox1.DataSource = SalaController.GetSala();
+                listBox1.ClearSelected();
+                MessageBox.Show("Sala removido com sucesso", "Sucesso", MessageBoxButtons.OK);
+            }
         }
     }
 }

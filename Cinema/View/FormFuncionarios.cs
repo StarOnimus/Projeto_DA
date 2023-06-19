@@ -25,6 +25,13 @@ namespace Cinema.View
             FuncionarioController.AddEditFuncionarios(fun_name.Text, fun_morada.Text, fun_salario.Text, fun_funcao.Text);
             listBox1.DataSource = FuncionarioController.GetFuncionarios();
             listBox1.ClearSelected();
+            MessageBox.Show("Funcionario adicionado/editado com sucesso", "Sucesso", MessageBoxButtons.OK);
+
+            fun_name.Text = "";
+            fun_morada.Text="";
+            fun_salario.Text="";
+            fun_funcao.Text = "";
+
         }
 
         private void del_fun_Click(object sender, EventArgs e)
@@ -35,6 +42,7 @@ namespace Cinema.View
                 FuncionarioController.EliminarFuncionario(funcionario.id);
                 listBox1.DataSource = FuncionarioController.GetFuncionarios();
                 listBox1.ClearSelected();
+                MessageBox.Show("Funcionario removido com sucesso", "Sucesso", MessageBoxButtons.OK);
             }
         }
 

@@ -13,7 +13,7 @@ namespace Cinema.Model
 
         public override string ToString()
         {
-            return nome + " " + morada + " " + numFiscal;
+            return nome + "  Morada: " + morada + " NIF:" + numFiscal;
         }
     }
 }

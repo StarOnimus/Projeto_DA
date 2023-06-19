@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.clienteNome = new System.Windows.Forms.TextBox();
             this.clienteMorada = new System.Windows.Forms.TextBox();
             this.clienteNumFisc = new System.Windows.Forms.TextBox();
@@ -42,7 +43,7 @@
             // clienteNome
             // 
             this.clienteNome.Location = new System.Drawing.Point(11, 30);
-            this.clienteNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clienteNome.Margin = new System.Windows.Forms.Padding(2);
             this.clienteNome.Name = "clienteNome";
             this.clienteNome.Size = new System.Drawing.Size(180, 20);
             this.clienteNome.TabIndex = 0;
@@ -50,7 +51,7 @@
             // clienteMorada
             // 
             this.clienteMorada.Location = new System.Drawing.Point(9, 73);
-            this.clienteMorada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clienteMorada.Margin = new System.Windows.Forms.Padding(2);
             this.clienteMorada.Name = "clienteMorada";
             this.clienteMorada.Size = new System.Drawing.Size(182, 20);
             this.clienteMorada.TabIndex = 1;
@@ -58,7 +59,7 @@
             // clienteNumFisc
             // 
             this.clienteNumFisc.Location = new System.Drawing.Point(9, 111);
-            this.clienteNumFisc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clienteNumFisc.Margin = new System.Windows.Forms.Padding(2);
             this.clienteNumFisc.Name = "clienteNumFisc";
             this.clienteNumFisc.Size = new System.Drawing.Size(182, 20);
             this.clienteNumFisc.TabIndex = 2;
@@ -96,7 +97,7 @@
             // adicionar
             // 
             this.adicionar.Location = new System.Drawing.Point(9, 192);
-            this.adicionar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.adicionar.Margin = new System.Windows.Forms.Padding(2);
             this.adicionar.Name = "adicionar";
             this.adicionar.Size = new System.Drawing.Size(182, 39);
             this.adicionar.TabIndex = 6;
@@ -108,7 +109,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(219, 15);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(249, 264);
             this.listBox1.TabIndex = 7;
@@ -117,7 +118,7 @@
             // eliminar
             // 
             this.eliminar.Location = new System.Drawing.Point(9, 236);
-            this.eliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.eliminar.Name = "eliminar";
             this.eliminar.Size = new System.Drawing.Size(182, 39);
             this.eliminar.TabIndex = 8;
@@ -139,7 +140,8 @@
             this.Controls.Add(this.clienteNumFisc);
             this.Controls.Add(this.clienteMorada);
             this.Controls.Add(this.clienteNome);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormClientes";
             this.Text = "Clientes";
             this.ResumeLayout(false);
